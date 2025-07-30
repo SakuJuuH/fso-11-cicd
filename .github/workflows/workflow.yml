@@ -9,6 +9,10 @@ on:
             - main
         types: [opened, synchronize]
 
+permissions:
+    contents: write
+    pull-requests: read
+
 env:
     SKIP_DEPLOY: ${{ contains(join(github.event.commits.*.message, ' '), '#skip') }}
 
