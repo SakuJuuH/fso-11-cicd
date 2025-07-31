@@ -21,6 +21,7 @@ app.use("/api/diagnoses", diagnosisRouter);
 
 app.use("/api/patients", patientsRouter);
 
+// General health check endpoint
 app.get("/health", (_req: Request, res: Response) => {
     res.status(200).json({
         status: "ok",
